@@ -146,6 +146,14 @@ Mahjong.prototype.Terminal = function (arr) {
     }
 }
 
+Mahjong.prototype.Init = function() {
+    for(var i = 0; i < 4; i++) {
+        this.peoples[i].score = 30000;
+        this.peoples[i].star  = 0;
+    }
+    show_score();
+}
+
 var mahjong = new Mahjong();
 
 function show_score() {
@@ -212,11 +220,36 @@ function btn_click(obj) {
             }
             break;
         case 3:
-            alert("정말 쵼보를 했습니까?");
-            mahjong.Foul(obj.value);
+            if(confirm("정말 쵼보를 했습니까?")) {
+                mahjong.Foul(obj.value);
+            }
             break;
     }
     show_score();
+    init_menu();
+}
+
+function init() {
+    if(confirm("정말 재시작 하시겠습니까?")) {
+        init_menu();
+        mahjong.Init();
+    }
+}
+
+function init_menu() {
+    document.getElementById("hwa").value = 0;
+    document.getElementById("pan").value = 0;
+    document.getElementById("bu").value = 0;
+    document.getElementById("so").value = 0;
+    for(var i = 0; i < 4; i++) {
+        document.getElementsByName("terminal")[i].checked = false;
+    }
+    
+    document.getElementById("hwa").style.top = "4em";
+    document.getElementById("pan").style.display = "none";
+    document.getElementById("bu").style.display = "none";
+    document.getElementById("so").style.display = "none";
+    document.getElementById("checkboxs").style.display = "none";
 }
 
 function hwa_click(obj) {
@@ -286,4 +319,5 @@ function terminal_click() {
     }
     mahjong.Terminal(_arr);
     show_score();
+    init_menu(); 
 }

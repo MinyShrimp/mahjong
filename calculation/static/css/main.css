@@ -23,6 +23,17 @@ select::-ms-expand {
     display: none;
 }
 
+.init-btn {
+    width: 720px;
+    height: 100px;
+
+    float: center;
+    font-size: 50px;
+
+    color: #E9EDF1;
+    background: red;
+}
+
 #wrapper {
     width:  720px;
     height: 720px;
