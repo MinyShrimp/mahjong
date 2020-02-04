@@ -1,0 +1,213 @@
+
+body {
+    background: #474544;
+    text-align: center; 
+    font-family: "Malgun Gothic";
+}
+
+select {
+    position: absolute;
+    width: 200px;
+    padding: .8em .5em;
+    margin: 0px;
+    border: 1px solid #999;
+    background: #fff;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    left: 75px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+#wrapper {
+    width:  720px;
+    height: 720px;
+    margin: 0 auto;
+    padding: 0px;
+    position: relative;
+        
+    border: 1px solid white;
+}
+
+#public-score {
+    text-align: left;
+    float: left;
+    margin-top: 1px;
+    margin-left: 3px;
+}
+
+#rect1 {
+    position: absolute;
+    left: 185px;
+    top: 20px;
+}
+
+#rect2 {
+    position: absolute;
+    left: 17px;
+    top: 535px;
+    
+    transform: rotate(270deg);
+}
+
+#rect3 {
+    position: absolute;
+    left: 535px;
+    top: 700px;
+    
+    transform: rotate(180deg);
+}
+
+#rect4 {
+    position: absolute;
+    left: 700px;
+    top: 185px;
+    
+    transform: rotate(90deg);
+}
+
+.center {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 185px;
+    top: 185px;
+
+    background: #AAAAAA;
+}
+
+.btns {
+    position: absolute;
+    width: 150px; 
+    height: 150px;
+    background: #E18060;
+}
+
+.btns:hover {
+    background: #eeb6a4;
+}
+
+.btns:active {
+    background: #d7552a;
+}
+
+.select {
+    background: #0080ff; 
+    color: #E9EDF1 !important;
+}
+
+.select:hover {
+    background: #40a0ff;
+}
+
+.select:active {
+    background: #0066cc;
+}
+
+.score-board {
+    position: absolute;
+    width: 350px;
+    height: 150px;
+    left: 165px;
+    background: #E9EDF1;
+}
+
+.pre {
+    position: absolute;
+    margin: 0 auto;
+    cursor:default;
+
+    align-items: center;
+    text-align: center;
+    color: #474544;
+
+    width: 100%;
+}
+
+.pre0 {
+    font-size: 100px;
+    top: 100px;
+}
+
+.pre1 {
+    font-size: 100px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.pre2 {
+    font-size: 50px;
+    top: 30px;
+}
+
+.pre3 {
+    font-size: 25px;
+    top: 90px;
+}
+
+.miss {
+    position: absolute;
+    margin: 0 auto;
+    cursor:default;
+
+    align-items: center;
+    text-align: center;
+    color: #E9EDF1;
+    background: red;
+
+    width: 75px;
+    height: 75px;
+
+    top: 0px;
+    left: 275px;
+}
+
+.miss:hover {
+    background: #ff4040;
+}
+
+.miss:active {
+    background: #c00;
+}
+
+.checkboxs {
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 20px;
+
+    width: 100%;
+    top: 5em;
+}
+
+.checkboxs input {
+    width: 20px;
+    height: 20px;
+
+    vertical-align: middle;
+}
+
+.checkboxs label {
+    vertical-align: middle;
+}
+
+.checkboxs button {
+    position: absolute;
+    vertical-align: middle;
+
+    width: 80px;
+    height: 40px;
+
+    top: 100px;
+    left: 260px;
+}
+
+input {
+    padding: 0px;
+    margin: 0px;
+}

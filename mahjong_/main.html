@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./main.css">
+        <script type="text/javascript" src="./main.js"></script>
+    </head>
+    <body>
+        <h1 style="color:white; font-size: 50px; padding: 0px;"> 마작 계산기 </h1>
+        <div id="wrapper">
+            <div class="center">
+                <span id="public-score"> 연짱 : 0 <br>공탁금 : 0 </span>
+                <div class="pre pre0">
+                    <select name="hwa" id="hwa" style="top: 4em;" onclick="hwa_click(this);">
+                        <option value="0">화료방법</option>
+                        <option value="1">쯔모</option>
+                        <option value="2">론</option>
+                        <option value="3">쵼보</option>
+                        <option value="4">유국</option>
+                    </select>
+                    <select name="pan" id="pan" style="display:none;" onclick="pan_click(this);">
+                        <option value="0">판수</option>
+                        <option value="1"> 1판      </option>
+                        <option value="2"> 2판      </option>
+                        <option value="3"> 3판      </option>
+                        <option value="4"> 4판      </option>
+                        <option value="5"> 만관     </option>
+                        <option value="6"> 하네만   </option>
+                        <option value="8"> 배만     </option>
+                        <option value="10">삼배만   </option>
+                        <option value="13">역만     </option>
+                    </select>
+                    <select name="bu" id="bu" style="display:none;" disabled>
+                        <option value="0">부수</option>
+                        <option value="20" id="1pan" style="display: inline;">20부</option>
+                        <option value="30">30부</option>
+                        <option value="40">40부</option>
+                        <option value="50">50부</option>
+                        <option value="60">60부</option>
+                        <option value="70">70부</option>
+                        <option value="80">80부</option>
+                        <option value="90">90부</option>
+                        <option value="100">100부</option>
+                        <option value="110">110부</option>
+                    </select>
+                    <select name="so" id="so" style="display:none;">
+                        <option value="0">쏘인 사람</option>
+                        <option value="1">동</option>
+                        <option value="2">남</option>
+                        <option value="3">서</option>
+                        <option value="3">북</option>
+                    </select>
+                    <div class="checkboxs" id="checkboxs" style="display: none;">
+                        <input type="checkbox" name="terminal" value="1" id="checkbox_1">
+                            <label for="checkbox_1">東&nbsp;&nbsp;&nbsp;</label>
+                        <input type="checkbox" name="terminal" value="2" id="checkbox_2">
+                            <label for="checkbox_2">南&nbsp;&nbsp;&nbsp;</label>
+                        <input type="checkbox" name="terminal" value="3" id="checkbox_3">
+                            <label for="checkbox_3">西&nbsp;&nbsp;&nbsp;</label>
+                        <input type="checkbox" name="terminal" value="4" id="checkbox_4">
+                            <label for="checkbox_4">北</label>
+                        <button onclick="terminal_click();">확인</button>
+                    </div>
+                </div>
+            </div>
+            <div id="rect1">
+                <button class="btns select" onclick="btn_click(this);" value="1">
+                    <div class="pre pre1">東</div>
+                </button>
+                <div class="score-board">
+                    <div class="pre pre2" name="score">30000</div>
+                    <div class="pre pre3" name="star">★: 0</div>
+                    <button class="miss" value="1" onclick="miss_click(this);"> 리치 /<br>발성 미스 </button>
+                </div>
+            </div>
+            <div id="rect2">
+                <button class="btns" onclick="btn_click(this);" value="2">
+                    <div class="pre pre1">南</div>
+                </button>
+                <div class="score-board">
+                    <div class="pre pre2" name="score">30000</div>
+                    <div class="pre pre3" name="star">★: 0</div>
+                    <button class="miss" value="2" onclick="miss_click(this);"> 리치 /<br>발성 미스 </button>
+                </div>
+            </div>
+            <div id="rect3">
+                <button class="btns" onclick="btn_click(this);" value="3">
+                    <div class="pre pre1">西</div>
+                </button>
+                <div class="score-board">
+                    <div class="pre pre2" name="score">30000</div>
+                    <div class="pre pre3" name="star">★: 0</div>
+                    <button class="miss" value="3" onclick="miss_click(this);"> 리치 /<br>발성 미스 </button>
+                </div>
+            </div>
+            <div id="rect4">
+                <button class="btns" onclick="btn_click(this);" value="4">
+                    <div class="pre pre1">北</div>
+                </button>
+                <div class="score-board">
+                    <div class="pre pre2" name="score">30000</div>
+                    <div class="pre pre3" name="star">★: 0</div>
+                    <button class="miss" value="4" onclick="miss_click(this);"> 리치 /<br>발성 미스 </button>
+                </div>
+            </div>
+        </div>
+        <span> Made by 김회민(새우) </span>
+    </body>
+
+</html>
