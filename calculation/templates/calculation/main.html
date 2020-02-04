@@ -14,14 +14,14 @@
             <div class="center">
                 <span id="public-score"> 연짱 : 0 <br>공탁금 : 0 </span>
                 <div class="pre pre0">
-                    <select name="hwa" id="hwa" style="top: 4em;" onmousedown="javascript:hwa_click(this);">
+                    <select name="hwa" id="hwa" style="top: 4em;" onchange="javascript:hwa_click(this);">
                         <option value="0">화료방법</option>
                         <option value="1">쯔모</option>
                         <option value="2">론</option>
                         <option value="3">쵼보</option>
                         <option value="4">유국</option>
                     </select>
-                    <select name="pan" id="pan" style="display:none;" onmousedown="javascript:pan_click(this);">
+                    <select name="pan" id="pan" style="display:none;" onchange="javascript:pan_click(this);">
                         <option value="0">판수</option>
                         <option value="1"> 1판      </option>
                         <option value="2"> 2판      </option>
@@ -62,52 +62,52 @@
                             <label for="checkbox_3">西&nbsp;&nbsp;&nbsp;</label>
                         <input type="checkbox" name="terminal" value="4" id="checkbox_4">
                             <label for="checkbox_4">北</label>
-                        <button onmousedown="javascript:terminal_click();">확인</button>
+                        <button onclick="javascript:terminal_click();">확인</button>
                     </div>
                 </div>
             </div>
             <div id="rect1">
-                <button class="btns select" onmousedown="javascript:btn_click(this);" value="1">
+                <button class="btns select" onclick="javascript:btn_click(this);" value="1">
                     <div class="pre pre1">東</div>
                 </button>
                 <div class="score-board">
                     <div class="pre pre2" name="score">30000</div>
                     <div class="pre pre3" name="star">★: 0</div>
-                    <button class="miss" value="1" onmousedown="javascript:miss_click(this);"> 리치 /<br>발성 미스 </button>
+                    <button class="miss" value="1" onclick="javascript:miss_click(this);"> 리치 /<br>발성 미스 </button>
                 </div>
             </div>
             <div id="rect2">
-                <button class="btns" onmousedown="javascript:btn_click(this);" value="2">
+                <button class="btns" onclick="javascript:btn_click(this);" value="2">
                     <div class="pre pre1">南</div>
                 </button>
                 <div class="score-board">
                     <div class="pre pre2" name="score">30000</div>
                     <div class="pre pre3" name="star">★: 0</div>
-                    <button class="miss" value="2" onmousedown="javascript:miss_click(this);"> 리치 /<br>발성 미스 </button>
+                    <button class="miss" value="2" onclick="javascript:miss_click(this);"> 리치 /<br>발성 미스 </button>
                 </div>
             </div>
             <div id="rect3">
-                <button class="btns" onmousedown="javascript:btn_click(this);" value="3">
+                <button class="btns" onclick="javascript:btn_click(this);" value="3">
                     <div class="pre pre1">西</div>
                 </button>
                 <div class="score-board">
                     <div class="pre pre2" name="score">30000</div>
                     <div class="pre pre3" name="star">★: 0</div>
-                    <button class="miss" value="3" onmousedown="javascript:miss_click(this);"> 리치 /<br>발성 미스 </button>
+                    <button class="miss" value="3" onclick="javascript:miss_click(this);"> 리치 /<br>발성 미스 </button>
                 </div>
             </div>
             <div id="rect4">
-                <button class="btns" onmousedown="javascript:btn_click(this);" value="4">
+                <button class="btns" onclick="javascript:btn_click(this);" value="4">
                     <div class="pre pre1">北</div>
                 </button>
                 <div class="score-board">
                     <div class="pre pre2" name="score">30000</div>
                     <div class="pre pre3" name="star">★: 0</div>
-                    <button class="miss" value="4" onmousedown="javascript:miss_click(this);"> 리치 /<br>발성 미스 </button>
+                    <button class="miss" value="4" onclick="javascript:miss_click(this);"> 리치 /<br>발성 미스 </button>
                 </div>
             </div>
         </div><br>
-        <button class="init-btn" onmousedown="javascript:init()">재시작</button><br>
+        <button class="init-btn" onclick="javascript:init()">재시작</button><br>
         <span> Made by 김회민(새우) </span>
     </body>
 
