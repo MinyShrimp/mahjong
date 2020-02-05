@@ -160,12 +160,30 @@ function show_score() {
     var _documents_public = document.getElementById("public-score");
     var _documents_score  = document.getElementsByName("score");
     var _documents_star   = document.getElementsByName("star");
-    
+    var _documents_prolongations = document.getElementsByClassName("circle");
+
     for (var i = 0; i < 4; i++) {
         _documents_score[i].innerHTML = mahjong.peoples[i].score;
         _documents_star[i].innerHTML = "★: " + mahjong.peoples[i].star;
+    } 
+    _documents_public.innerHTML = "<div class='box'></div> : " + mahjong.public_score;
+    
+    // 연짱 처리
+    _documents_prolongations[0].classList.remove('circle-double-select');
+    for(var i = 0; i < 4; i++) {
+        _documents_prolongations[i].classList.remove('circle-select');
     }
-    _documents_public.innerHTML = "연짱 : " + mahjong.prolongation + "<br>공탁금 : " + mahjong.public_score;
+
+    if( mahjong.prolongation <= 4 ) {
+        for(var i = 0; i < mahjong.prolongation; i++) {
+            _documents_prolongations[i].classList.add('circle-select');
+        }
+    } else {
+        _documents_prolongations[0].classList.add('circle-double-select');
+        for(var i = 1; i < mahjong.prolongation - 5; i++) {
+            _documents_prolongations[i].classList.add('circle-select');
+        }
+    }
 }
 
 function btn_click(obj) {

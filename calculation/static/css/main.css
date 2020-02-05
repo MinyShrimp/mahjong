@@ -44,13 +44,6 @@ select::-ms-expand {
     border: 1px solid white;
 }
 
-#public-score {
-    text-align: left;
-    float: left;
-    margin-top: 1px;
-    margin-left: 3px;
-}
-
 #rect1 {
     position: absolute;
     left: 185px;
@@ -221,4 +214,40 @@ select::-ms-expand {
 input {
     padding: 0px;
     margin: 0px;
+}
+
+#prolongation {
+    position: absolute;
+    width: 100%;
+    top: 14px;
+}
+
+.circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+}
+
+.circle-select {
+    background-color: greenyellow;
+}
+
+.circle-double-select {
+    background-color: green;
+}
+
+#public-score {
+    position: absolute;
+    width: 100%;
+    bottom: 14px;
+    text-align: center;
+}
+
+.box {
+    width: 7px;
+    height: 14px;
+    background-color: white;
+    display: inline-block;
 }
