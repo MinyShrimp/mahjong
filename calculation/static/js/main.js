@@ -151,7 +151,7 @@ Mahjong.prototype.Init = function() {
         this.peoples[i].score = 30000;
         this.peoples[i].star  = 0;
     }
-    this.first = 0;
+    this.first = 1;
     this.prolongation = 0;
     this.public_score = 0;
 
