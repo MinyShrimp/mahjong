@@ -190,7 +190,7 @@ function show_score() {
         }
     } else {
         _documents_prolongations[0].classList.add('circle-double-select');
-        for(var i = 1; i < mahjong.prolongation - 5; i++) {
+        for(var i = 1; i < mahjong.prolongation - 4; i++) {
             _documents_prolongations[i].classList.add('circle-select');
         }
     }
