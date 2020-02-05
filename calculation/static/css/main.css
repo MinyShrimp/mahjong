@@ -209,6 +209,8 @@ select::-ms-expand {
 
     top: 100px;
     left: 260px;
+
+    z-index: 9;
 }
 
 input {
