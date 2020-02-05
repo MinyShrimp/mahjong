@@ -154,6 +154,13 @@ Mahjong.prototype.Init = function() {
     this.first = 0;
     this.prolongation = 0;
     this.public_score = 0;
+
+    var btns = document.getElementsByClassName("btns");
+    btns[0].classList.add("select");
+    for (var i = 1; i < 4; i++) {
+        btns[i].classList.remove("select");
+    }
+
     show_score();
 }
 
