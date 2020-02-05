@@ -90,9 +90,9 @@ Mahjong.prototype.Lon = function (p1, p2, pan, bu) {
     var _score_zip = this._getScore(p1, pan, bu);
     var _score = _score_zip[0]; _star = _score_zip[1];
 
-    this.peoples[p1 - 1].score += _score + this.public_score;
+    this.peoples[p1 - 1].score += _score + this.prolongation * 300 + this.public_score;
     this.peoples[p1 - 1].star += _star;
-    this.peoples[p2 - 1].score -= _score;
+    this.peoples[p2 - 1].score -= _score - this.prolongation * 300;
 
     this._addFirst(p1);
     this.public_score = 0;
