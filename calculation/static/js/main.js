@@ -92,7 +92,7 @@ Mahjong.prototype.Lon = function (p1, p2, pan, bu) {
 
     this.peoples[p1 - 1].score += _score + this.prolongation * 300 + this.public_score;
     this.peoples[p1 - 1].star += _star;
-    this.peoples[p2 - 1].score -= _score - this.prolongation * 300;
+    this.peoples[p2 - 1].score -= (_score + this.prolongation * 300);
 
     this._addFirst(p1);
     this.public_score = 0;
