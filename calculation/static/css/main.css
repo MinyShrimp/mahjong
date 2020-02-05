@@ -140,8 +140,8 @@ select::-ms-expand {
 .pre1 {
     font-size: 100px;
     height: 100%;
-    top: 0px;
     left: 0px;
+    transform: translateY(-50%);
 }
 
 .pre2 {
