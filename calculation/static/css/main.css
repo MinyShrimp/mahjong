@@ -144,22 +144,11 @@ select::-ms-expand {
     top: 100px;
 }
 
-@media screen and (min-width : 360px) and (max-width : 800px) {
-    .pre1 {
-        font-size: 100px;
-        height: 100%;
-        top: -10px;
-        left: 0px;
-    }
-}
-
-@media screen and (min-width : 800px) {
-    .pre1 {
-        font-size: 100px;
-        height: 100%;
-        top: 0px;
-        left: 0px;
-    }
+.pre1 {
+    font-size: 100px;
+    height: 100%;
+    left: 0px;
+    transform: translateY(-50%);
 }
 
 .pre2 {
