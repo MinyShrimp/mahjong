@@ -9,6 +9,8 @@ function Mahjong() {
     this.first = 1;
     this.prolongation = 0;
     this.public_score = 0;
+
+    this.pro_colors = [ "green", "red", "black" ];
 }
 
 Mahjong.prototype.__ceil = function (value) {
@@ -117,7 +119,6 @@ Mahjong.prototype.Miss = function (p) {
 
 // 유국
 Mahjong.prototype.Terminal = function (arr) {
-    console.log(arr);
     if (arr.length == 0) {
         this._addFirst(9999, 9999);
     } else if (arr.length == 1) {
@@ -176,11 +177,10 @@ function show_score() {
         _documents_score[i].innerHTML = mahjong.peoples[i].score;
         _documents_star[i].innerHTML = "★: " + mahjong.peoples[i].star;
     } 
-    _documents_public.innerHTML = "<div class='box'></div> : " + mahjong.public_score;
+    _documents_public.innerHTML = "<div class='box'></div> " + mahjong.public_score;
     
     // 연짱 처리
-    _documents_prolongations[0].classList.remove('circle-double-select');
-    for(var i = 0; i < 4; i++) {
+    for(var i = 0; i < 5; i++) {
         _documents_prolongations[i].classList.remove('circle-select');
     }
 
@@ -189,8 +189,9 @@ function show_score() {
             _documents_prolongations[i].classList.add('circle-select');
         }
     } else {
-        _documents_prolongations[0].classList.add('circle-double-select');
-        for(var i = 1; i < mahjong.prolongation - 4; i++) {
+        var _v = parseInt(mahjong.prolongation / 5);
+        _documents_prolongations[0].style.background = mahjong.pro_colors[ _v - 1 ];
+        for(var i = 1; i <= (mahjong.prolongation % 5); i++) {
             _documents_prolongations[i].classList.add('circle-select');
         }
     }
